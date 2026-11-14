@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dirty Ol' Men – Handgemachter Rock &amp; Blues</title>
+<meta name="description" content="Dirty Ol' Men: handgemachter, rauer Rock &amp; Blues von fünf erfahrenen Musikern. Röhrenverstärker, echte Drums, Songs ihrer Helden. Jetzt für Feste, Festivals und Kneipenabende anfragen.">
+<meta property="og:title" content="Dirty Ol' Men – Handgemachter Rock &amp; Blues">
+<meta property="og:description" content="The Spirit of Rock'n'Roll. Fünf Musiker, jede Menge Spielfreude.">
+<meta property="og:image" content="bilder/web/gruppe.jpg">
+<meta name="theme-color" content="#0b0b0b">
+<style>
+:root{
+  --black:#0b0b0b; --coal:#151515; --line:#2a2a2a;
+  --white:#f4f2ee; --paper:#ecebe7; --ink:#111; --mute:#9b9b9b;
+  --accent:#B5532A;           /* Kupfer */
+  --accent-lt:#d2704a;        /* Kupfer heller, für kleine Schrift auf Schwarz */
+  --head:Impact,"Haettenschweiler","Arial Narrow Bold","Helvetica Neue Condensed Bold",sans-serif;
+  --body:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px;-webkit-text-size-adjust:100%}
+body{background:var(--black);color:var(--white);font:400 1.06rem/1.65 var(--body);overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(1100px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--head);font-weight:400;text-transform:uppercase;letter-spacing:.05em;line-height:1.05}
+h2{font-size:clamp(2.1rem,7vw,3.4rem)}
+h2 em{font-style:normal;color:var(--accent)}
+.eyebrow{font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent-lt);font-weight:700;margin-bottom:.8rem}
+
+/* Navigation */
+.nav{position:sticky;top:0;z-index:50;background:rgba(11,11,11,.9);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--head);letter-spacing:.08em;font-size:1.15rem}
+.brand img{width:38px;height:38px;border-radius:50%}
+.menu{display:flex;gap:26px;list-style:none;font-size:.82rem;text-transform:uppercase;letter-spacing:.14em;font-weight:600}
+.menu a{text-decoration:none;color:#cfcfcf;padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
+.menu a:hover{color:#fff;border-color:var(--accent)}
+.menu .cta a{background:var(--accent);color:#0b0b0b;padding:8px 16px;border:0}
+.menu .cta a:hover{background:#fff;color:#111}
+.burger{display:none;background:none;border:1px solid var(--line);color:#fff;font:inherit;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;padding:9px 14px;cursor:pointer}
+@media(max-width:820px){
+  .burger{display:block}
+  .menu{position:absolute;left:0;right:0;top:60px;background:var(--black);flex-direction:column;gap:0;border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:max-height .3s}
+  .menu.open{max-height:420px}
+  .menu li a{display:block;padding:16px 20px;border-bottom:1px solid var(--line);font-size:.95rem}
+  .menu .cta a{margin:14px 20px;text-align:center}
+}
+
+/* Hero: Gruppenfoto oben, Logo hängt mittig halb im Bild, darunter der Titel */
+.hero{background:var(--black);border-bottom:1px solid var(--line);--lw:min(230px,56vw)}
+.hero-photo{position:relative}
+.hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 14%}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,11,11,.25) 0,transparent 25%,transparent 40%,rgba(11,11,11,.85) 78%,var(--black) 100%)}
+.hero-copy{position:relative;z-index:2;text-align:center;padding:0 20px 56px}
+.hero-logo{width:var(--lw);margin:calc(var(--lw) / -2) auto 20px;border-radius:50%;box-shadow:0 0 0 3px #0b0b0b,0 10px 40px rgba(0,0,0,.7)}
+.hero h1{font-size:clamp(1.9rem,6.6vw,3.6rem);letter-spacing:.06em}
+.hero h1 span{color:var(--accent-lt)}
+.hero p.lead{max-width:540px;margin:14px auto 26px;color:#c8c8c8}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 28px;text-decoration:none;text-transform:uppercase;letter-spacing:.14em;font-weight:700;font-size:.82rem;border:2px solid #fff;color:#fff;background:none;cursor:pointer;font-family:inherit;transition:.2s}
+.btn.solid{background:var(--accent);border-color:var(--accent);color:#0b0b0b}
+.btn:hover{background:#fff;border-color:#fff;color:#111}
+.btn.solid:hover{background:transparent;border-color:var(--accent);color:#fff}
+@media(min-width:900px){
+  .hero{--lw:270px}
+  .hero-photo img{aspect-ratio:auto;height:min(68vh,700px);object-position:50% 14%}
+}
+
+/* helle Textfläche (Kontrast wie bei no-porridge) */
+.paper{background:var(--accent);color:#0b0b0b;padding:84px 0}
+.paper .eyebrow{color:#fff;opacity:1}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:48px}
+.paper h2{margin-bottom:.5em}
+.paper p{margin-bottom:1em;font-size:1.1rem}
+.paper strong.lead{font-family:var(--head);font-weight:400;text-transform:uppercase;letter-spacing:.05em;font-size:1.5rem;color:#fff;display:block;margin-bottom:.4em;border-bottom:3px solid #fff;padding-bottom:6px}
+.paper p b{font-weight:800;color:#0b0b0b}
+
+/* Repertoire */
+.dark{padding:84px 0;border-bottom:1px solid var(--line)}
+.dark.alt{background:var(--coal)}
+.intro{max-width:680px;color:#cfcfcf}
+.intro p{margin-top:1em}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 8px}
+.chips span{border:1px solid var(--accent);padding:8px 16px;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase}
+
+.quote{margin-top:48px;padding:34px 0 0;border-top:1px solid var(--line);font-family:var(--head);text-transform:uppercase;font-size:clamp(1.5rem,5vw,2.4rem);letter-spacing:.04em;line-height:1.2;max-width:820px}
+.quote em{font-style:normal;color:var(--accent)}
+
+/* Termine */
+.events{display:grid;gap:14px;margin-top:30px}
+.event{display:grid;grid-template-columns:104px 1fr auto;gap:20px;align-items:center;padding:18px;border:1px solid var(--line);background:var(--black)}
+.chip{background:var(--accent);color:#0b0b0b;text-align:center;padding:10px 6px;font-family:var(--head);line-height:1}
+.chip b{display:block;font-size:2rem;font-weight:400}
+.chip small{display:block;font-size:.8rem;letter-spacing:.12em;margin-top:4px}
+.event h3{font-size:1.35rem;letter-spacing:.04em;margin-bottom:2px}
+.event p{color:var(--mute);font-size:.94rem;line-height:1.45}
+.tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;border:1px solid #555;color:#aaa;padding:6px 12px;text-decoration:none;white-space:nowrap}
+a.tag:hover{border-color:var(--accent);color:#fff}
+.event.past{opacity:.5}
+.event.past .chip{background:#444;color:#ddd}
+.hint{margin-top:16px;color:var(--mute);font-size:.9rem}
+.hint a{color:var(--accent-lt)}
+@media(max-width:600px){
+  .event{grid-template-columns:78px 1fr;padding:14px;gap:14px}
+  .event .tag{grid-column:1/-1;text-align:center}
+  .chip b{font-size:1.6rem}
+}
+
+/* Statement: ein ruhiger Abschluss-Satz vor dem Booking */
+.statement{background:var(--accent);color:#0b0b0b;text-align:center;padding:72px 0}
+.statement p{font-family:var(--head);text-transform:uppercase;letter-spacing:.04em;line-height:1.15;font-size:clamp(1.7rem,5.6vw,3rem);max-width:860px;margin:0 auto}
+.statement span{display:block;margin-top:18px;font-size:.82rem;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:#fff}
+
+/* Wer wir sind: zwei große Wörter nebeneinander */
+.duo{display:grid;grid-template-columns:1fr;border-top:3px solid #0b0b0b;margin-top:6px}
+.duo-item{padding:30px 0}
+.duo-item+.duo-item{border-top:3px solid #0b0b0b}
+.word{font-family:var(--head);text-transform:uppercase;letter-spacing:.03em;line-height:.9;font-size:clamp(3.4rem,17vw,6.6rem);color:#fff;margin-bottom:.22em}
+.duo-item p{font-size:1.08rem;max-width:520px}
+@media(min-width:780px){
+  .duo{grid-template-columns:1fr 1fr}
+  .duo-item{padding:40px 40px 40px 0}
+  .duo-item+.duo-item{border-top:0;border-left:3px solid #0b0b0b;padding:40px 0 40px 40px}
+}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);border-top:3px solid #0b0b0b;text-align:center}
+.trio div{padding:22px 8px}
+.trio div+div{border-left:3px solid #0b0b0b}
+.trio b{display:block;font-family:var(--head);font-weight:400;text-transform:uppercase;font-size:clamp(1.2rem,4.4vw,2rem);letter-spacing:.04em;color:#fff;line-height:1.1}
+.trio span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+
+/* Vergangene Shows zum Aufklappen */
+details.past-shows{margin-top:26px;border-top:1px solid var(--line)}
+details.past-shows summary{cursor:pointer;list-style:none;padding:18px 0;font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-lt);display:flex;align-items:center;gap:10px}
+details.past-shows summary::-webkit-details-marker{display:none}
+details.past-shows summary::before{content:"+";display:inline-grid;place-items:center;width:22px;height:22px;border:1px solid var(--accent-lt);font-size:1rem;line-height:1}
+details.past-shows[open] summary::before{content:"–"}
+details.past-shows .events{margin-top:0}
+
+/* Band */
+.members{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:32px}
+.member{background:var(--black);border:1px solid var(--line);overflow:hidden}
+.member img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:transform .5s}
+.member:hover img{transform:scale(1.04)}
+.member div{padding:14px 16px 18px;border-top:3px solid var(--accent);position:relative;z-index:1;background:var(--black)}
+.member h3{font-size:1.25rem;letter-spacing:.05em}
+.member p{color:var(--mute);font-size:.9rem}
+.note{color:var(--mute);font-size:.85rem;margin-top:18px}
+
+/* Galerie */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;margin-top:30px}
+.gallery a{display:block;overflow:hidden;background:#000}
+.gallery img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1);transition:transform .5s,filter .3s}
+.gallery a:hover img{transform:scale(1.05)}
+.gallery a.wide{grid-column:1/-1}
+.gallery a.wide img{aspect-ratio:16/8}
+
+/* Booking */
+.booking{display:grid;grid-template-columns:1fr 1.2fr;gap:48px}
+@media(max-width:820px){.booking{grid-template-columns:1fr;gap:28px}}
+form{display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.row{grid-template-columns:1fr}}
+label{font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;color:var(--mute);display:grid;gap:6px}
+input,select,textarea{width:100%;background:var(--black);color:#fff;border:1px solid #3a3a3a;padding:13px;font:inherit;font-size:16px;border-radius:0;-webkit-appearance:none;appearance:none}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent-lt);outline-offset:0}
+textarea{min-height:120px;resize:vertical}
+.contact-lines{margin-top:22px;display:grid;gap:6px;color:#cfcfcf}
+.contact-lines a{color:#fff}
+
+.sticky-book{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0));z-index:60;transform:translateX(-50%);display:inline-flex;align-items:center;justify-content:center;padding:11px 26px;border-radius:999px;background:var(--accent);color:#0b0b0b;text-decoration:none;font-size:.74rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;box-shadow:0 6px 22px rgba(0,0,0,.55);transition:transform .3s,background .2s,opacity .3s}
+.sticky-book:hover{background:#fff;color:#111}
+.sticky-book.hide{transform:translate(-50%,160%);opacity:0;pointer-events:none}
+body{padding-bottom:0}
+footer{padding:44px 0 90px;text-align:center;color:var(--mute);font-size:.88rem}
+footer img{width:80px;margin:0 auto 14px;border-radius:50%}
+footer a{margin:0 10px;color:#ddd}
+footer a:hover{color:var(--accent-lt)}
+
+/* sanftes Einblenden, nur wenn Bewegung erlaubt */
+@media(prefers-reduced-motion:no-preference){
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+  .rv.in{opacity:1;transform:none}
+}
+
+/* Termine: Datum als Textzeile, gut sichtbar */
+.event{grid-template-columns:1fr auto;padding:22px 24px}
+.event .when{font-family:var(--head);text-transform:uppercase;letter-spacing:.08em;font-size:1.45rem;color:var(--accent-lt);line-height:1;margin-bottom:8px}
+.event h3{font-size:1.4rem}
+@media(max-width:600px){.event{grid-template-columns:1fr}.event .tag{justify-self:start}}
+
+/* Programm: mittig */
+#songs .wrap{text-align:center}
+#songs .intro{margin-inline:auto}
+#songs .chips{justify-content:center}
+
+/* Auswahlfeld mit Pfeil-Icon */
+select{cursor:pointer;padding-right:46px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='10' viewBox='0 0 16 10'%3E%3Cpath d='M1 1l7 7 7-7' fill='none' stroke='%23d2704a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:16px 10px}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="bilder/web/logo.jpg" alt="" width="38" height="38">DIRTY OL' MEN</a>
+    <button class="burger" aria-expanded="false" aria-controls="menu">Menü</button>
+    <ul class="menu" id="menu">
+      <li><a href="#about">Über uns</a></li>
+      <li><a href="#band">Band</a></li>
+      <li><a href="#songs">Songs</a></li>
+      <li><a href="#live">Auftritte</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li class="cta"><a href="#booking">Anfragen</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-photo">
+    <img src="bilder/web/gruppe.jpg" width="2200" height="1649" alt="Die fünf Musiker von Dirty Ol' Men laufen nebeneinander auf einem Bahnsteig">
+  </div>
+  <div class="hero-copy">
+    <img class="hero-logo" src="bilder/web/logo.jpg" width="800" height="800" alt="Dirty Ol' Men Band Logo">
+    <h1>Handgemachter Rock &amp; Blues.<br><span>The Spirit of Rock'n'Roll</span></h1>
+    <p class="lead">Röhrenverstärker, knackige Drums und jede Menge Spielfreude. Live für Festivals, Feste und Kneipen.</p>
+    <div class="btns">
+      <a class="btn solid" href="#booking">Anfragen</a>
+    </div>
+  </div>
+</header>
+
+<section class="paper" id="about">
+  <div class="wrap">
+    <p class="eyebrow">Wer wir sind</p>
+    <div class="duo rv">
+      <div class="duo-item">
+        <div class="word">Dirty</div>
+        <p><b>Handgemachter, ungeschliffener Rock &amp; Blues.</b> Für den Sound von <b>Röhrenverstärkern</b>, <b>knackigen Drums</b> und jede Menge <b>Spielfreude</b>. Dazu kommt der gepflegte <b>Humor einer reinen Männerband</b>.</p>
+      </div>
+      <div class="duo-item">
+        <div class="word">Ol' Men</div>
+        <p>Die <b>fünf Musiker</b> sind längst keine 20 mehr. Der Lack ist vielleicht ab, aber wie bei einem guten <b>Single Malt Whisky</b> gilt: Mit den Jahren wird's erst richtig gut! <b>Jahrzehntelange musikalische Erfahrung</b> in verschiedensten Formationen haben aus fünf Musikern das gemacht, was sie heute sind.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="band">
+  <div class="wrap">
+    <p class="eyebrow">Die fünf</p>
+    <h2>Die <em>Band</em></h2>
+    <div class="members">
+      <figure class="member"><img src="bilder/web/gesang.jpg" loading="lazy" width="1000" height="1500" alt="Michael Nöllge am Mikrofon"><div><h3>Michael Nöllge</h3><p>Gesang</p></div></figure>
+      <figure class="member"><img src="bilder/web/keys.jpg" loading="lazy" width="1000" height="1500" alt="Wolfgang Panzer am Keyboard"><div><h3>Wolfgang Panzer</h3><p>Keyboard, Gitarre &amp; Gesang</p></div></figure>
+      <figure class="member"><img src="bilder/web/gitarre.jpg" loading="lazy" width="1000" height="1500" alt="Norbert Buchholzki an der Gitarre"><div><h3>Norbert Buchholzki</h3><p>Gitarre</p></div></figure>
+      <figure class="member"><img src="bilder/web/bass.jpg" loading="lazy" width="1000" height="1500" alt="Thorsten Pfeiffer am Bass"><div><h3>Thorsten Pfeiffer</h3><p>Bass</p></div></figure>
+      <figure class="member"><img src="bilder/web/drums.jpg" loading="lazy" width="1000" height="1500" alt="Thomas Nassauer am Schlagzeug"><div><h3>Thomas Nassauer</h3><p>Schlagzeug</p></div></figure>
+    </div>
+  </div>
+</section>
+
+<section class="dark alt" id="songs">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Songs</p>
+      <h2>Eine Coverband? Ja.<br><em>Aber nicht irgendeine!</em></h2>
+      <div class="intro">
+        <p>Dirty Ol' Men spielen nicht einfach die Songs, die ohnehin jede zweite Coverband im Programm hat. Klar, bekannte Rock- und Bluesklassiker gehören dazu. Aber eben auch jede Menge musikalischer Geheimtipps, die man nicht an jeder Ecke zu hören bekommt.</p>
+        <p>Von AC/DC bis ZZ Top, von den großen Rocklegenden bis zu Blues-Größen wie Robert Cray und Joe Bonamassa: Das Repertoire ist vielseitig, überraschend und garantiert nicht von der Stange.</p>
+      </div>
+      <div class="chips" aria-label="Beispiele aus dem Repertoire">
+        <span>AC/DC</span><span>ZZ Top</span><span>Robert Cray</span><span>Joe Bonamassa</span><span>Geheimtipps</span>
+      </div>
+      <div class="intro">
+        <p>Das Ergebnis: Ein abwechslungsreicher Mix, der neben mitreißenden Rock-Hymnen auch Momente zum Zuhören und Genießen bietet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="live">
+  <div class="wrap">
+    <p class="eyebrow">Live erleben</p>
+    <h2>Nächste <em>Shows</em></h2>
+    <div class="events">
+      <article class="event">
+        <div><p class="when">Bald</p><h3>Nächste Konzerte folgen</h3><p>Aktuell ist kein Termin eingetragen. Die neuesten Auftritte gibt es zuerst auf Instagram.</p></div>
+        <a class="tag" href="https://www.instagram.com/dirty_ol_men_band/" target="_blank" rel="noopener">Instagram</a>
+      </article>
+    </div>
+    <details class="past-shows">
+      <summary>Vergangene Shows ansehen</summary>
+      <div class="events">
+        <article class="event">
+          <div><p class="when">29. August 2026</p><h3>Fire Water Burn Festival</h3><p>Dirty Ol' Men · Rock Cover</p></div>
+          <span class="tag">Vorbei</span>
+        </article>
+      </div>
+    </details>
+    <p class="hint">Aktuelles gibt es auf <a href="https://www.instagram.com/dirty_ol_men_band/" target="_blank" rel="noopener">Instagram @dirty_ol_men_band</a>.</p>
+  </div>
+</section>
+
+<section class="dark alt" id="galerie">
+  <div class="wrap">
+    <p class="eyebrow">Bilder</p>
+    <h2>Gale<em>rie</em></h2>
+    <div class="gallery">
+      <a class="wide" href="bilder/web/gruppe.jpg"><img src="bilder/web/gruppe.jpg" loading="lazy" width="2200" height="1649" alt="Gruppenfoto der Band"></a>
+      <a href="bilder/web/gitarre.jpg"><img src="bilder/web/gitarre.jpg" loading="lazy" width="1000" height="1500" alt="Norbert Buchholzki an der Gitarre"></a>
+      <a href="bilder/web/gesang.jpg"><img src="bilder/web/gesang.jpg" loading="lazy" width="1000" height="1500" alt="Michael Nöllge am Mikrofon"></a>
+      <a href="bilder/web/drums.jpg"><img src="bilder/web/drums.jpg" loading="lazy" width="1000" height="1500" alt="Thomas Nassauer am Schlagzeug"></a>
+      <a href="bilder/web/bass.jpg"><img src="bilder/web/bass.jpg" loading="lazy" width="1000" height="1500" alt="Thorsten Pfeiffer am Bass"></a>
+    </div>
+    <p class="note">Fotos: Ahmad Alahdab</p>
+  </div>
+</section>
+
+<section class="statement">
+  <div class="wrap rv">
+    <p>Eine musikalische Zeitreise durch ihr eigenes Leben. Die Songs ihrer Helden, mit gehöriger Portion Leidenschaft.</p>
+    <span>Denn jeder Song ist Herzensangelegenheit.</span>
+  </div>
+</section>
+
+<section class="dark" id="booking">
+  <div class="wrap booking">
+    <div>
+      <p class="eyebrow">Booking</p>
+      <h2><em>Anfragen</em></h2>
+      <p class="intro" style="margin-top:14px">Ihr plant ein Festival, ein Fest oder einen Abend in eurer Kneipe? Schickt uns kurz die Eckdaten, wir melden uns.</p>
+      <div class="contact-lines">
+        <span>Instagram: <a href="https://www.instagram.com/dirty_ol_men_band/" target="_blank" rel="noopener">@dirty_ol_men_band</a></span>
+        <span>E-Mail: <a href="mailto:info@dirty-ol-men.de">info@dirty-ol-men.de</a></span>
+      </div>
+    </div>
+        <form action="mailto:info@dirty-ol-men.de" method="post" enctype="text/plain">
+      <div class="row">
+        <label>Name<input name="Name" autocomplete="name" required></label>
+        <label>E-Mail<input type="email" name="Email" autocomplete="email" required></label>
+      </div>
+      <div class="row">
+        <label>Datum<input type="date" name="Datum"></label>
+        <label>Ort der Veranstaltung<input name="Ort der Veranstaltung" placeholder="Stadt / Location"></label>
+      </div>
+      <label>Anlass
+        <select name="Anlass">
+          <option>Festival / Open Air</option><option>Kneipe</option>
+          <option>Hochzeit / Private Feier</option><option>Sonstiges</option>
+        </select>
+      </label>
+      <label>Nachricht<textarea name="Nachricht"></textarea></label>
+      <button class="btn solid" type="submit">Anfrage senden</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="bilder/web/logo.jpg" alt="Dirty Ol' Men Band" width="70" height="70" loading="lazy">
+    <p><a href="https://www.instagram.com/dirty_ol_men_band/" target="_blank" rel="noopener">Instagram</a><a href="#booking">Anfragen</a></p>
+    <p style="margin-top:10px">Fotos: Ahmad Alahdab<br>© 2026 Dirty Ol' Men · <a href="impressum.html" style="margin:0">Impressum</a> · <a href="datenschutz.html" style="margin:0">Datenschutz</a></p>
+  </div>
+</footer>
+
+<a class="sticky-book" href="#booking" id="sb">Jetzt anfragen</a>
+
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded',false)}});
+  var sb=document.getElementById('sb'),bk=document.getElementById('booking'),hb=document.querySelector('.hero .btns'),st={};
+  function upd(){sb.classList.toggle('hide',!!(st.b||st.h))}
+  if(sb&&'IntersectionObserver' in window){
+    if(bk)new IntersectionObserver(function(es){st.b=es[0].isIntersecting;upd()},{threshold:.25}).observe(bk);
+    if(hb)new IntersectionObserver(function(es){st.h=es[0].isIntersecting;upd()},{threshold:0}).observe(hb);
+  }
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.15});
+    els.forEach(function(e){io.observe(e)});
+  }else{els.forEach(function(e){e.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
